@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "841da71b-a3a1-4054-bea0-b9d09ece3fe7",
+		"name": "Ticket system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22354696"
+	},
+	"item": [
+		{
+			"name": "Delete show",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/shows/17",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"shows",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update show",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"theaterId\" : 3,\n    \"shows\" :\n        {\n            \"showDate\" : \"2023-10-02 00:00:00\",\n            \"showStartTime\" : \"2023-10-02 12:00:00\",\n            \"showEndTime\" : \"2023-10-02 02:35:00\",\n            \"movieId\": 4,\n            \"screenId\": 4\n        }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/shows/17",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"shows",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create show",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"theaterId\" : 3,\n    \"shows\" : [\n        {\n            \"showDate\" : \"2023-10-02 00:00:00\",\n            \"showStartTime\" : \"2023-10-02 09:00:00\",\n            \"showEndTime\" :\"2023-10-02 11:45:00\",\n            \"movieId\": 4,\n            \"screenId\": 4\n        },\n        {\n            \"showDate\" : \"2023-10-02 00:00:00\",\n            \"showStartTime\" : \"2023-10-02 12:00:00\",\n            \"showEndTime\" : \"2023-10-02 02:45:00\",\n            \"movieId\": 4,\n            \"screenId\": 4\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/shows",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"shows"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/cities/1/movies/1/shows?showDate=2023-09-26 09:00:00",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cities",
+						"1",
+						"movies",
+						"1",
+						"shows"
+					],
+					"query": [
+						{
+							"key": "showDate",
+							"value": "2023-09-26 09:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
