@@ -1,0 +1,65 @@
+{
+  "movieName": "End Game",
+  "movieId": 1,
+  "city": "Mumbai",
+  "cityId": 1,
+  "chosenDate": "2023-09-26 00:00:00",
+  "language": "ENGLISH",
+  "format": "3D",
+  "theaters": [
+    {
+      "theaterName": "Talkies",
+      "theaterId": 1,
+      "shows": [
+        {
+          "showId": 1,
+          "showDate": "2023-09-26 00:00:00",
+          "showStartDateTime": "2023-09-26 10:00:00",
+          "totalSeats": 20,
+          "availableSeats": 10
+        },
+        {
+          "showId": 3,
+          "showDate": "2023-09-26 00:00:00",
+          "showStartDateTime": "2023-09-26 12:20:00",
+          "totalSeats": 20,
+          "availableSeats": 5
+        },
+        {
+          "showId": 5,
+          "showDate": "2023-09-26 00:00:00",
+          "showStartDateTime": "2023-09-26 14:40:00",
+          "totalSeats": 20,
+          "availableSeats": 6
+        }
+      ]
+    },
+    {
+      "theaterName": "Star Cinema",
+      "theaterId": 2,
+      "shows": [
+        {
+          "showId": 7,
+          "showDate": "2023-09-26 00:00:00",
+          "showStartDateTime": "2023-09-26 10:00:00",
+          "totalSeats": 25,
+          "availableSeats": 15
+        },
+        {
+          "showId": 8,
+          "showDate": "2023-09-26 00:00:00",
+          "showStartDateTime": "2023-09-26 12:30:00",
+          "totalSeats": 25,
+          "availableSeats": 13
+        },
+        {
+          "showId": 9,
+          "showDate": "2023-09-26 00:00:00",
+          "showStartDateTime": "2023-09-26 14:30:00",
+          "totalSeats": 25,
+          "availableSeats": 12
+        }
+      ]
+    }
+  ]
+}
