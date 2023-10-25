@@ -1,0 +1,106 @@
+- Ticket informations
+
+1st Home page
+- List of cities - city show up if any theatre has running show, 
+- List of movies in city. Api/v1/cities/:city/movies
+    - Movie Id
+    - Movie name
+    - Genre
+    - Thumbnail image url
+
+- Get details of movie - /api/v1/movies/:movieId
+    - MovieId
+    - Name
+    - Genre
+    - Format 2d/3d/imax
+    - Languages
+    - Runtime
+    - ReleaseDate
+    - CastDetails
+    - Movie Description
+
+- Click on book tickets - /api/v1/cities/:city/movies/:movieId/features - to get combination of features and languages applicable for the movie and city
+    - Select Language and Format combination
+        - Language
+        - Format
+
+- Click on Format and Language - /api/v1/cities/:city/movies/:movieId/theaters?language=:language&format=:format&date=:date 
+    - theaterId
+    - TheaterName
+    - Date
+    - List<Features>  - Mobile ticket or food and B/v , ticket cancellable or not
+    - List<ShowTime>
+        - ShowId
+        - Time
+        - Features - Imax/English
+        - ScreenName
+        - List<Class>
+            - ClassId
+            - NumberOfAvailableTickets
+            - ListPrice
+
+- Selecting on a show time  /api/v1/shows/:showId
+    - List<Class>
+        - Id
+        - DisplayOrder - 1, 2, 3 - top, middle, bottom
+        - Cost
+        - List<Row>
+            - Id
+            - RowName
+            - List<Number>
+                - Column
+                - Status
+                - BestSeller - boolean
+
+- Selecting the seats - POST -  /api/v1/shows/:showId/block (combination of movie, theatre, time etc)
+[
+	{
+	rowId : “”,
+	rowNum: “”
+	},
+	{
+	rowId : “”,
+	rowNum: “”
+	}
+]
+
+
+Response
+	- Movie Details
+	- Cinema Details
+	- ShowId
+	- Seat details
+	- TotalPrice
+	- List<Tax>
+
+ 
+
+2nd Home page
+- List of theatres in a city
+- List of movies and showtimes in theatre
+    - Movie name
+    - Genre
+    - Thumbnail image url
+
+
+City
+Movies
+Theaters
+Shows
+
+
+
+Ticket Booking Gateway  like CSP-SPI  - this will do the aggregation, validate the city and date and then make call to theatre service
+
+Theatre Service -> it will call the show service to fetch the shows
+
+
+Show Service
+
+Order Service -> For booking
+
+
+Theatre Integration Service -> API to perform Theater crud
+
+
+
